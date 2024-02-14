@@ -7,13 +7,16 @@
 
 .nav-logo {
     margin-right: 50%;
+    font-family: "DancingScript";
+
+    a {
+        text-decoration: none;
+        color: var(--black);
+    }
 }
 
-// .nav-items-container {
-//     color: var(--primary-color);
-// }
-
 .nav-items {
+    font-size: 24px;
     padding-left: 5px;
     padding-right: 5px;
     text-decoration: none;

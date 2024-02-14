@@ -1,7 +1,7 @@
 import './App.scss';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
-import MainView from './components/MainView/MainView';
+import Home from './components/Home/Home';
 import NavBar from './components/NavBar/NavBar';
 import Portfolio from './components/Portfolio/Portfolio';
 import {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <MainView />
+      <Home />
     ),
   },
   {
