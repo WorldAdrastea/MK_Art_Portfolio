@@ -1,22 +1,17 @@
-:root {
-  --primary-color: #bb9bb0; /* Rose Quartz */
-  --secondary-color: #A288A6; /* Mountbatten Pink */
-  --tertiary-color: #CCBCBC; /* Silver */
-  --white: #F1E3E4; /* Lavender Blush */
-  --black: #1C1D21; /* Eerie Black */
-}
+$primary-color: #9C59D1;
+$secondary-color: #FFF430; 
+$white: #F1E3E4; /* Lavender Blush */
+$darker-white: darken($white, 10%);
+$black: #1C1D21; /* Eerie Black */
 
-@font-face {
-  font-family: "Caveat";
-  src: local("Caveat"), url(./fonts/Caveat-Regular.ttf) format("truetype");
-}
 
-@font-face {
-  font-family: "DancingScript";
-  src: local("DancingScript"), url(./fonts/DancingScript-Regular.ttf) format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=League+Spartan:wght@100..900&display=swap');
 
 body {
-  background-color: var(--primary-color);
-  font-family: "Caveat";
+  background-color: $white;
+  font-family: "League Spartan", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
