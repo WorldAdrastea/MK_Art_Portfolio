@@ -1,8 +1,12 @@
 $primary-color: #9C59D1;
+$darker-primary: darken($primary-color, 10%);
+$lighter-primary: lighten($primary-color, 10%);
 $secondary-color: #FFF430; 
-$white: #F1E3E4; /* Lavender Blush */
-$darker-white: darken($white, 10%);
-$black: #1C1D21; /* Eerie Black */
+$darker-secondary: darken($secondary-color, 10%);
+$lighter-secondary: lighten($secondary-color, 10%);
+$white: #FFFEFF;
+$darker-white: darken($white, 5%);
+$black: #1C1D21;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=League+Spartan:wght@100..900&display=swap');

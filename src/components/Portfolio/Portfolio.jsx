@@ -1,10 +1,11 @@
-import "./Portfolio.scss"
+import "./Portfolio.scss";
+import Heading from "../Text/Heading/Heading";
 
 export default function Portfolio() {
     return (
         <main>
             <div className="title-container">
-                <h1>This is my work</h1>
+                <Heading text={"This is my work"}/>
             </div>
         </main>
     )

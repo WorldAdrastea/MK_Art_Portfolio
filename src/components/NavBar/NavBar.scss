@@ -5,7 +5,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: $darker-white;
+    background-image: linear-gradient(90deg, $darker-white, $white);
+    box-shadow:
+        0 0 50px $darker-white,
+        -10px 0 80px $white,
+        10px 0 80px $lighter-secondary;        
 }
 
 .nav-logo {
