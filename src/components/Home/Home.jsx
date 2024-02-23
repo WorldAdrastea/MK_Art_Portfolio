@@ -9,44 +9,23 @@ import picture3 from "../../assets/world by nana.png";
 //Utilites
 import { useEffect, useState } from "react";
 import { Slide } from "react-awesome-reveal";
-import { ArrowUpCircle } from "react-feather";
 
 //Components
 import Heading from "../Text/Heading/Heading";
 import Paragraph from "../Text/Paragraphs/Paragraph";
+import TopButton from "../ToTopButton/TopButton";
 
 
 export default function Home() {
     const [randomPicture, setRandomPicture] = useState(null);
-    const [showScrollButton, setShowScrollButton] = useState(false);
 
     useEffect(() => {
         //Sets up random image to appear every time page is loaded
         const pictureArray = [picture1, picture2, picture3];
         const randomIndex = Math.floor(Math.random() * pictureArray.length);
         setRandomPicture(pictureArray[randomIndex])
-        
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                setShowScrollButton(true);
-            } else {
-                setShowScrollButton(false);
-            };
-        };
-        
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
     }, [])
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
 
     return (
         <main className="home">
@@ -116,11 +95,7 @@ export default function Home() {
                     </div>
                 </Slide>
             </div>
-            {showScrollButton && (
-                <button className="scroll-top-button" onClick={scrollToTop}>
-                    <ArrowUpCircle />
-                </button>
-            )}
+            <TopButton />
         </main>
     );
 };

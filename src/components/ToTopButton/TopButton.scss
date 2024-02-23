@@ -1,0 +1,22 @@
+@import "../../App.scss";
+
+.scroll-top-button {
+    display: block;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 1%;
+    bottom: 1%;
+    background-image: linear-gradient(180deg,#FFF430,#FFFFFF,#9C59D1, #000000);
+    border: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    opacity: 0.5;
+}
+
+.scroll-top-button:hover {
+    cursor: pointer;
+    border: 1px solid $black;
+    opacity: 1;
+}
