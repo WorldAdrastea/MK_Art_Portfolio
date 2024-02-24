@@ -17,37 +17,37 @@ export default function Portfolio() {
                 <Heading text={"This is my work"}/>
             </div>
             <div className="grid-container">
-                <Paragraph text={"This is a work asajopjadog"} />
+                <Paragraph text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In velit."} />
                 <Slide triggerOnce direction="up" className="slides">
                     <img src={image1} alt="portfolio work" />
                 </Slide>
                 <Paragraph text={"By Miyu Kiriyaki"} />
 
-                <Paragraph text={"This is a work asajopjadog"} />
+                <Paragraph text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In velit."} />
                 <Slide triggerOnce direction="up" className="slides">
                     <img src={image2} alt="portfolio work" />
                 </Slide>
                 <Paragraph text={"By Miyu Kiriyaki"} />
 
-                <Paragraph text={"This is a work asajopjadog"} />
+                <Paragraph text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In velit."} />
                 <Slide triggerOnce direction="up" className="slides">
                     <img src={image3} alt="portfolio work" />
                 </Slide>
                 <Paragraph text={"By Miyu Kiriyaki"} />
 
-                <Paragraph text={"This is a work asajopjadog"} />
+                <Paragraph text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In velit."} />
                 <Slide triggerOnce direction="up" className="slides">
                     <img src={image4} alt="portfolio work" />
                 </Slide>
                 <Paragraph text={"By Miyu Kiriyaki"} />
 
-                <Paragraph text={"This is a work asajopjadog"} />
+                <Paragraph text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In velit."} />
                 <Slide triggerOnce direction="up" className="slides">
                     <img src={image5} alt="portfolio work" />
                 </Slide>
                 <Paragraph text={"By Miyu Kiriyaki"} />
 
-                <Paragraph text={"This is a work asajopjadog"} />
+                <Paragraph text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In velit."} />
                 <Slide triggerOnce direction="up" className="slides">
                     <img src={image6} alt="portfolio work" />
                 </Slide>
