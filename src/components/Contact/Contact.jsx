@@ -1,4 +1,5 @@
 import Heading from "../Text/Heading/Heading"
+import Paragraph from "../Text/Paragraphs/Paragraph";
 // import Paragraph from "../Text/Paragraphs/Paragraph";
 import "./Contact.scss"
 
@@ -9,6 +10,9 @@ export default function Contact() {
         <main>
             <div className="title-container">
                 <Heading text={"Contact me here"}/>
+            </div>
+            <div className="paragraph-container">
+                <Paragraph text={"I would love to get in touch, please connect with me through any of these methods below:"}/>
             </div>
             {/* <div>
                 <form>
