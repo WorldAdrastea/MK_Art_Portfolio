@@ -14,19 +14,6 @@ export default function Contact() {
             <div className="paragraph-container">
                 <Paragraph text={"I would love to get in touch, please connect with me through any of these methods below:"}/>
             </div>
-            {/* <div>
-                <form>
-                    <label>
-                        <Paragraph text={"First name"} />
-                        <input type="text" name="firstName"/>
-                    </label>
-                    <label>
-                        <Paragraph text={"Last name"} />
-                        <input type="text" name="lastName" />
-                    </label>
-                    <input type="submit" value={"Submit"} />
-                </form>
-            </div> */}
             <div className="social-media-icons">
                 <a href="/" className="icon-item">
                     <Linkedin size={64} />
@@ -37,6 +24,23 @@ export default function Contact() {
                 <a href="/" className="icon-item">
                     <Mail size={64} />
                 </a>
+            </div>
+            <div className="contact-form-container">
+                <form className="contact-form">
+                    <label>
+                        <Paragraph text={"First name"} />
+                        <input type="text" name="firstName" required/>
+                    </label>
+                    <label>
+                        <Paragraph text={"Last name"} />
+                        <input type="text" name="lastName" required />
+                    </label>
+                    <label>
+                        <Paragraph text= {"Enter your message here"} />
+                        <textarea placeholder="Your message" name="message" required />
+                    </label>
+                    <input type="submit" value={"Send"} id="send-button"/>
+                </form>
             </div>
         </main>
     );
