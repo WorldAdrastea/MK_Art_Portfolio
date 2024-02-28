@@ -12,12 +12,18 @@ import picture6 from "../../assets/Warudo Shaded.png";
 //Utilites
 import { useEffect, useState } from "react";
 import { Slide } from "react-awesome-reveal";
+import Masonry from 'react-masonry-css';
 
 //Components
 import Heading from "../Text/Heading/Heading";
 import Paragraph from "../Text/Paragraphs/Paragraph";
 import TopButton from "../ToTopButton/TopButton";
 
+const breakpointColumnsObj = {
+    default: 3,
+    1100: 2,
+    700: 1
+};
 
 export default function Home() {
     const [randomPicture, setRandomPicture] = useState([]);
@@ -37,74 +43,13 @@ export default function Home() {
         setRandomPicture(shuffledPictures);
     }, []);
 
-
     return (
         <main className="home">
             <div className="home-header-container">
                 <Heading text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In velit."}/>
                 <Paragraph text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet sodales eros, in varius arcu. Fusce a ex egestas, dapibus diam non, efficitur diam. Curabitur augue ante, egestas sit amet orci vitae, consectetur condimentum sem. Cras cursus et libero in tincidunt. Morbi mollis blandit neque, id hendrerit erat vehicula ut. Maecenas dapibus turpis ac suscipit fermentum. Nulla finibus libero quis orci rhoncus, nec tincidunt enim pharetra."} />
             </div>
-            <div className="home-image">
-                {/* <Slide triggerOnce>
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce direction="up">
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce direction="right">
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce>
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce direction="up">
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce direction="right">
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce>
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce direction="up">
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce direction="right">
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce>
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce direction="up">
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide>
-                <Slide triggerOnce direction="right">
-                    <div className="home-image-item">
-                        {randomPicture && <img src={randomPicture} alt="randomPicture"/>}
-                    </div>
-                </Slide> */}
+            {/* <div className="home-image">
                 {randomPicture.map((picture, index) => (
                     <Slide key={index} triggerOnce direction={index % 2 === 0 ? "up" : "down"}>
                         <div className="home-image-item">
@@ -112,7 +57,20 @@ export default function Home() {
                         </div>
                     </Slide>
                 ))}
-            </div>
+            </div> */}
+            <Masonry
+                breakpointCols={breakpointColumnsObj}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column"
+            >
+                {randomPicture.map((picture, index) => (
+                    <Slide key={index} triggerOnce direction={index % 2 === 0 ? "up" : "down"}>
+                        <div className="home-image-item">
+                            <img src={picture} alt={`randomPicture${index}`} />
+                        </div>
+                    </Slide>
+                ))}
+            </Masonry>
             <TopButton />
         </main>
     );
