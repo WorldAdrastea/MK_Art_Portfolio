@@ -57,5 +57,31 @@
 
     #send-button {
         margin-top: 20px;
+        max-width: 100px;
+        padding: 0;
+    }
+
+    input {
+        -moz-box-shadow: inset -3px -3px 10px $lighter-secondary;
+        -webkit-box-shadow: inset -3px -3px 10px $lighter-secondary;
+        box-shadow: inset -3px -3px 10px $lighter-secondary;
+        border-radius: 15px;
+        height: 36px;
+        width: 500px;
+        padding-left: 20px;
+    }
+
+    textarea {
+        width: 500px;
+        height: 100px;
+        max-width: 500px;
+        max-height: 180px;
+        font-size: 16px;
+        font-family: "League Spartan", sans-serif;
+        outline: none;
+    }
+
+    textarea::placeholder {
+        padding: 5px;
     }
 }
